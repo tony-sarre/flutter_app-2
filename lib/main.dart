@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,13 +17,19 @@ class MyApp extends StatelessWidget {
         body:  Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const[
-                Text("Alert Criminal 2023",
+              children: [
+                SvgPicture.asset(
+                    "android/assets/images/security.svg",
+                  color: Colors.green,
+                  width: 100,
+                ),
+                const Text("Alert Criminal 2023",
                   style: TextStyle(
-                    fontSize: 42
+                    fontSize: 40,
+                    fontFamily: 'Poppins'
                   ),
                 ),
-                Text("Your application that manage your security",
+                const Text("Your application that manage your security",
                   style: TextStyle(
                     fontSize: 20
                   ),
